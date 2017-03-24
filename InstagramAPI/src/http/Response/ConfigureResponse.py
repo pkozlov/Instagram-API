@@ -13,7 +13,7 @@ class ConfigureResponse(Response):
             self.media_id = response['media']['id']
 
             # TODO see fix at danleyb2/Instagram-API#20
-            self.image_url = response['media']['image_versions2']['candidates']['0']['url']
+            self.image_url = response['media']['image_versions2']['candidates'][0]['url']
             self.media_code = response['media']['code']
         else:
             self.setMessage(response['message'])
